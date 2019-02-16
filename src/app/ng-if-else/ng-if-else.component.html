@@ -1,0 +1,7 @@
+<div *ngIf="passFlag; else rePassword">
+  Enter the password <input type="text" #pass (keyup)="checkPass(pass.value)">
+</div>
+
+<ng-template #rePassword>
+  <br> Enter Re-Password<input type="password" #pass (keyup)="checkPass(pass.value)">
+</ng-template>

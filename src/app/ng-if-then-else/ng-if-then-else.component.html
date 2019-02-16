@@ -1,0 +1,8 @@
+<ng-container *ngIf="passFlag; then password; else repassword"></ng-container>
+<ng-template #password>
+ <br> Enter the password <input type="text" #pass>
+ <br> <input type="submit" value="Next" (click)="checkPass(pass.value)">
+</ng-template>
+<ng-template #repassword>
+  <br> Enter Re-Password<input type="password">
+</ng-template>

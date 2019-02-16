@@ -1,0 +1,9 @@
+<br><input type="number" #mobileNumber (keyup)="check(mobileNumber.value)"><br>
+<input type="submit" *ngIf="mobileCheck"> 
+
+
+<h2>NgIf for Password enable</h2>
+
+<br><input type="text" #passCheck (keyup)="passwordCheck(passCheck.value)"><br>
+<br><input type="text" #rePassCheck *ngIf="rePassFlag"(keyup)="rePasswordCheck(passCheck.value,rePassCheck.value)"><br>
+<input type="submit" [disabled]="submitFlag"> 

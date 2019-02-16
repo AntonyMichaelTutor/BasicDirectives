@@ -1,0 +1,12 @@
+<div [ngSwitch]="person">
+  <div *ngSwitchCase="'username'">
+      <br> Enter the Name <input type="text" #userName>
+      <br> <input type="submit" value="Next" (click)="check(userName.value,1)">
+  </div>
+  <div *ngSwitchCase="'password'">
+      <br> Enter the password <input type="password" #pass>
+      <br> <input type="submit" value="Next" (click)="check(pass.value,2)">
+  </div>
+  <div *ngSwitchCase="'repassword'">Enter Re-Password<input type="password"></div>
+  <div *ngSwitchDefault>Bye Bye</div>
+</div> 

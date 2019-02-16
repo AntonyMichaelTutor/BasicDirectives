@@ -1,0 +1,21 @@
+<h1>Example for Event Binding and Interpolation</h1>
+<div id="content" style.background-color={{colorValue}}>
+  <input type="color" #clr><br>
+  <input type="submit" value="Choose color" (click)="changeColor(clr.value)"><br>
+  {{colorValue}}
+</div>
+<h1>Example for NgModule</h1>
+
+<input type="text" [(ngModel)]="goalText">
+<br>{{ goalText }}<br>
+<h1>Below result is showing using Property Binding</h1>
+<input type="text" [value]="goalText">
+<h1>Below result is showing using Bind Event</h1>
+<input type="text" bind-value="goalText">
+
+<h1>Example for Disable property</h1>
+<input type="number" #valueA placeholder="Enter a number" (keyup)="check(valueA.value)">
+<input type="submit" [disabled]="buttonFlag">
+<h1>Example for Disable property for mobile number</h1>
+<input type="number" #mNo placeholder="Enter a mobile number" (keyup)="mobileCheck(mNo.value)">
+<input type="submit" [disabled]="mobileFlag">
