@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { NgIfElseComponent } from './ng-if-else/ng-if-else.component';
 import { NgIfThenElseComponent } from './ng-if-then-else/ng-if-then-else.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 const routes: Routes = [
                           {path:"DataBinding",component:DataBindingComponent},
                           {path:"NgIf",component:NgIfExampleComponent},
                           {path:"NgIfElse",component:NgIfElseComponent},
                           {path:"NgIfThenElse",component:NgIfThenElseComponent},
-                          {path:"Switch",component:NgSwitchComponent}
+                          {path:"Switch",component:NgSwitchComponent},
+                          {path:"NgForExample",component:NgForComponent}
+
                       ];
 
 @NgModule({

@@ -1,0 +1,75 @@
+<div>
+<table>
+    <thead>
+      <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Age</th>
+          <th>Course</th>
+      </tr>
+    </thead>  
+    <tbody>
+      <tr *ngFor="let s of students" [ngStyle]="{'color':clrChange(s.studentID)}">
+          <td>{{s.studentID}}</td>
+          <td>{{s.studentName}}</td>
+          <td>{{s.gender}}</td>
+          <td>{{s.age}}</td>
+          <td>{{s.course}}</td>
+      </tr>
+    </tbody>
+</table> 
+<ul>
+  <li *ngFor="let stu of students">{{stu.studentID}} {{stu.studentName}}</li>
+</ul>
+<select>
+  <option *ngFor="let stu of students">{{stu.studentName}}</option>
+</select>
+
+<select #c (change)="bgChange(c.value)">
+    <option *ngFor="let clr of color" value="{{clr.colorValue}}">{{clr.colorValue}}</option>
+  </select>
+  <br>
+
+  <select #c (change)="bgChange1(c.value)">
+      <option *ngFor="let clr of color1" value="{{clr.colorValue}}">{{clr.color}}</option>
+    </select>  
+</div>
+
+<h1>Example for Search</h1>
+<h3>Type 1</h3>
+<br><input type="text" #sName [(ngModel)]="searchName" (keyup)="searchFunction(sName.value)">
+<ul>
+    <li *ngFor="let stu of students">
+      <label *ngIf="flagSearch">{{stu.studentID}} {{stu.studentName}}</label>
+      <label *ngIf="stu.studentName==searchName">{{stu.studentID}} {{stu.studentName}}</label>
+    </li>
+</ul>
+
+<h3>Type 2</h3>
+<br><input type="text" #sNamee [(ngModel)]="searchName1" (keyup)="searchFunction1(sNamee.value)">
+
+<div *ngFor="let stu of students">
+    <div *ngIf="flagSearch1; else searchShow">
+        <label [ngStyle]="{'color':'red'}">{{stu.studentID}} {{stu.studentName}}</label>
+    </div>
+    <ng-template #searchShow>
+        <label *ngIf="stu.studentName.toLowerCase().substring(0,searchName1.length)===searchName1.toLowerCase()">{{stu.studentID}} {{stu.studentName}}</label><br>
+    </ng-template>
+  </div>
+
+  <input type="text" #about (keyup)="aboutYou(about.value)">
+  {{abt}}
+  <br><input type="text" [(ngModel)]="abtt">
+  {{abtt}}
+
+  <div [ngStyle]="{'background-color':'green'}">check</div>
+<br><Br>
+<div *ngFor="let stu of students" [ngStyle]="{'color':clrChange(stu.studentID)}">{{stu.studentID}} {{stu.studentName}}</div>
+
+<ul *ngFor="let person of people">
+  <li [class.text-success]="person.country === 'UK'"
+      [class.text-primary]="person.country === 'USA'"
+      [class.text-danger]="person.country === 'HK'">{{ person.name }} ({{ person.country }})
+  </li>
+</ul>
