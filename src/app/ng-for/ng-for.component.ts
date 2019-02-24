@@ -13,6 +13,10 @@ export class NgForComponent implements OnInit {
   abt:string;
   flagSearch:Boolean=true;
   flagSearch1:Boolean=true;
+  btnFlag:Boolean=false;
+  btnFlag1:boolean = true;
+  styleValue:string = "btnOkay btnSize";
+  styleValue1:string = "btnOkay btnSize";
   students: any[] =   
   [  
     { studentID: 1, studentName: 'Steve', gender: 'Male', age: 35, course: 'MCA' },  
@@ -20,28 +24,7 @@ export class NgForComponent implements OnInit {
     { studentID: 3, studentName: 'Rina', gender: 'Female', age: 45, course: 'B.Tech' },  
     { studentID: 4, studentName: 'Alex', gender: 'Female', age: 24, course: 'M.Tech' },  
   ]; 
-  people: any[] = [
-    {
-      "name": "Douglas  Pace",
-      "country": 'UK'
-    },
-    {
-      "name": "Mcleod  Mueller",
-      "country": 'USA'
-    },
-    {
-      "name": "Day  Meyers",
-      "country": 'HK'
-    },
-    {
-      "name": "Aguirre  Ellis",
-      "country": 'UK'
-    },
-    {
-      "name": "Cook  Tyson",
-      "country": 'USA'
-    }
-  ];
+  
   color:any[]=
   [
     {colorValue:'Select'},
@@ -100,6 +83,19 @@ export class NgForComponent implements OnInit {
       return 'red';
     }else{
       return 'green';
+    }
+  }
+  submit(){
+    this.styleValue="btn btnSize";
+    this.btnFlag = true;
+  }
+  submit1(){
+    if(this.btnFlag1){
+      this.styleValue1="btn btnSize";
+      this.btnFlag1 = false;
+    }else{
+      this.styleValue1="btnOkay btnSize";
+      this.btnFlag1 = true;
     }
   }
 

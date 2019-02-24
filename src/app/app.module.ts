@@ -9,6 +9,7 @@ import { NgIfElseComponent } from './ng-if-else/ng-if-else.component';
 import { NgIfThenElseComponent } from './ng-if-then-else/ng-if-then-else.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
     NgIfElseComponent,
     NgIfThenElseComponent,
     NgSwitchComponent,
-    NgForComponent
+    NgForComponent,
+    PipeExampleComponent
   ],
   imports: [
     FormsModule,

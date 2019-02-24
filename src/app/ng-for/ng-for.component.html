@@ -67,9 +67,10 @@
 <br><Br>
 <div *ngFor="let stu of students" [ngStyle]="{'color':clrChange(stu.studentID)}">{{stu.studentID}} {{stu.studentName}}</div>
 
-<ul *ngFor="let person of people">
-  <li [class.text-success]="person.country === 'UK'"
-      [class.text-primary]="person.country === 'USA'"
-      [class.text-danger]="person.country === 'HK'">{{ person.name }} ({{ person.country }})
-  </li>
-</ul>
+<h1>Example for NgClass</h1>
+
+<button [ngClass]="'btn btnSize'" type="submit">Click</button>
+
+<button [ngClass]="styleValue" [disabled]="btnFlag" type="submit" (click)="submit()">Click</button>
+
+<button [ngClass]="styleValue1" type="submit" (click)="submit1()">Click</button>
