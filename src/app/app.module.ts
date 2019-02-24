@@ -10,6 +10,8 @@ import { NgIfThenElseComponent } from './ng-if-then-else/ng-if-then-else.compone
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+import { ServiceExampleComponent } from './service-example/service-example.component';
+import { PlayerDetailsService } from './player-details.service';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,15 @@ import { PipeExampleComponent } from './pipe-example/pipe-example.component';
     NgIfThenElseComponent,
     NgSwitchComponent,
     NgForComponent,
-    PipeExampleComponent
+    PipeExampleComponent,
+    ServiceExampleComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PlayerDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

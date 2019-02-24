@@ -8,6 +8,7 @@ import { NgIfThenElseComponent } from './ng-if-then-else/ng-if-then-else.compone
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+import { ServiceExampleComponent } from './service-example/service-example.component';
 
 const routes: Routes = [
                           {path:"DataBinding",component:DataBindingComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
                           {path:"NgIfThenElse",component:NgIfThenElseComponent},
                           {path:"Switch",component:NgSwitchComponent},
                           {path:"NgForExample",component:NgForComponent},
-                          {path:"PipeExample",component:PipeExampleComponent}
+                          {path:"PipeExample",component:PipeExampleComponent},
+                          {path:"ServiceExample",component:ServiceExampleComponent}
 
                       ];
 
